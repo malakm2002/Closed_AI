@@ -11,3 +11,9 @@ Model Optimization: Tune hyperparameters to improve the performance of the selec
 Model Evaluation: Evaluate the performance of the final model on the test set. Interpret the results and analyze the model's ability to distinguish between signal and background processes.
 
 Deployment: Once satisfied with the model's performance, deploy the model in a production environment to classify new data.
+
+# Downloading the necessary modules in Jupyter Notebook - Visual Studio Code
+1. Install Python and add it to PATH system variable
+2. Open the Command Line and type the below command to download pip: python -m ensurepip --default-pip 
+3. download pandas: pip install pandas
+4. download sklearn: pip install scikit-learn
