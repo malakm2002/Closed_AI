@@ -17,3 +17,4 @@ Deployment: Once satisfied with the model's performance, deploy the model in a p
 2. Open the Command Line and type the below command to download pip: python -m ensurepip --default-pip 
 3. download pandas: pip install pandas
 4. download sklearn: pip install scikit-learn
+5. download tensorflow: pip install tensorflow 
