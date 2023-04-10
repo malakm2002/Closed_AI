@@ -34,3 +34,5 @@ Once satisfied with the model's performance, deploy the model in a production en
 
 
 ## Large File Storage in Github is no longer used but rather Google drive
+
+## to run the project, upload the python notebook to Google Colab
