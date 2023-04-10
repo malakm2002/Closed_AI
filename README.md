@@ -31,3 +31,6 @@ Once satisfied with the model's performance, deploy the model in a production en
 3. download pandas: **pip install pandas**
 4. download sklearn: **pip install scikit-learn**
 5. download tensorflow: **pip install tensorflow**
+
+
+## Large File Storage in Github is no longer used but rather Google drive
