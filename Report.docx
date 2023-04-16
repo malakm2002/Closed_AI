@@ -1,0 +1,41 @@
+Higgs Boson Challenge Project Report
+
+Introduction
+This project aims at solving the Higgs Boson Challenge which consists of predicting whether a signal is a Higgs Boson or a background event.
+This report will present the different steps taken while solving the classification problem as well as the results obtained.
+
+Dataset
+The dataset used in the project is located in Google Drive, particularly in a folder entitled "ML".
+It contains 600 thousand training examples, each of which is make of 1 output label of class binary and 28 features that consist of 21 low-level features and 7 high-level features.
+
+Data Cleaning
+Before the start of model training, the data was cleaned and prepared.
+First, the headers were assigned to the columns representing the features.
+Second, data exploration was performed though the head() function showing the first few rows, the info() function summarizing the information of the dataset, describe() displaying statistics about the data, and the shape() showing the number of rows and columns.
+As a result, it was shown that column 8 and 21 labeled 'jet_1_phi' and 'jet_4_btag' respectively contain unexpected values, which lead to the "mixed data types message." Column 8 contained numeric values stored in string objects, while column 21 contained alphabetical values in string objects instead of float64 type. Therefore, the to_numeric() function was used to change the data type of these columns to numeric, coercing any non-numeric values to NaN. The resulting NaN values were removed using the dropna() function.
+Finally, the dataset was split into training and testing sets using the train_test_split() function. The features (all columns except the first one) were assigned to the X variable, while the first column was assigned to the y variable.
+
+Models:
+Linear Regression
+The first model created was a Linear Regression model, which was fit to the training set using the LinearRegression() function from scikit-learn. The model was then used to make predictions on the test set using the predict() function. The mean squared error of the model was evaluated using the mean_squared_error() function from scikit-learn.
+Logistic Regression
+The second model created was a Logistic Regression model, which was also fit to the training set using the LogisticRegression() function. The model was then used to make predictions on the test set, and its accuracy was evaluated using the accuracy_score() function from scikit-learn.
+Decision Trees
+The third model created was a Decision Tree Classifier, which was fit to the training set using the DecisionTreeClassifier() function. The accuracy of the classifier on the test set was then evaluated using the score() function.
+XGBoost
+The fourth created was an XGBoost Classifier, which was fit to the training set using the XGBClassifier() function from the XGBoost library. The model's accuracy was then evaluated on the test set using the accuracy_score() function from scikit-learn.
+Neural Network
+The neural network architecture in this model consists of four layers: three dense layers with 100, 50, and 25 neurons respectively, using the 'relu' activation function, and a final dense layer with a single neuron using the sigmoid activation function. This architecture allows for the model to learn complex patterns and relationships within the data.
+
+The specified hyperparameters for this model include a batch size of 32, 50 epochs of training, and a stochastic gradient descent optimizer with a learning rate of 0.003 and momentum of 0.9. The batch size allows the model to process a small batch of data at a time, reducing the computation required and speeding up the training process. The 50 epochs provide enough time for the model to converge on a solution. The optimizer helps the model to optimize its weights and biases for the best performance.
+
+The model uses the binary cross-entropy loss function, which is appropriate for binary classification problems like this one. The accuracy metric is used to evaluate the performance of the model, which indicates the proportion of correctly predicted labels over the total number of predictions.
+
+A callback is used to save the best model with the highest accuracy during training, which ensures that the model with the best performance is retained.
+
+The validation set is used to evaluate the model's performance during training, and the test set is used to evaluate the final performance of the model. This helps to avoid overfitting and ensures that the model generalizes well to unseen data.
+
+The achieved accuracy of 0.75 indicates that the model performed relatively well in predicting the labels of the test set, which is a good sign of its effectiveness.
+
+Conclusion:
+In this report, we analyzed the "HIGGS" dataset and trained five different machine learning models to predict the class label. We found that Neural  performed the best, achieving an accuracy score of 0.75. The other models also achieved reasonable accuracy scores, but not as good as Neural Network. The results suggest that the Neural Network algorithm is well-suited to this problem and could be used in future analyses.
