@@ -20,9 +20,6 @@ Tune hyperparameters to improve the performance of the selected model(s) on the 
 
 Evaluate the performance of the final model on the test set. Interpret the results and analyze the model's ability to distinguish between signal and background processes.
 
-### Deployment
-
-Once satisfied with the model's performance, deploy the model in a production environment to classify new data.
 
 ## Downloading the necessary modules in Jupyter Notebook - Visual Studio Code
 
